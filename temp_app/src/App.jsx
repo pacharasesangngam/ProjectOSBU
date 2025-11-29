@@ -40,15 +40,17 @@ function App() {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   };
 
+  
+  const bankersRef = React.useRef(null);
+
   return (
     <div>
       <Header theme={theme} toggleTheme={toggleTheme} />
       <Hero />
 
       <main className="container" style={{ paddingBottom: '8rem' }}>
-        <BankersAlgo />
+        <BankersAlgo ref={bankersRef}/>
       </main>
-
       <Footer />
     </div>
   );

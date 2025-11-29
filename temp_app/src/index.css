@@ -15,6 +15,7 @@
   --header-bg: rgba(5, 5, 5, 0.5);
 }
 
+
 .light-mode {
   --bg-color: #ffffff;
   --text-color: #1a1a1a;
@@ -85,6 +86,7 @@ button {
   width: 100%;
   margin: 0 auto;
   padding: 0 60px;
+  position: relative;
 }
 
 .glass-panel {

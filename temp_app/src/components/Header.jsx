@@ -1,6 +1,13 @@
 import React from 'react';
+import BankersAlgo from './BankersAlgo'
 
-const Header = ({ theme, toggleTheme }) => {
+const Header = ({ theme, toggleTheme ,bankersRef }) => {
+     const scrollToBankers = (e) => {
+    e.preventDefault();
+    if (!bankersRef?.current) return;
+    bankersRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
     return (
         <header style={{
             position: 'fixed',
@@ -18,9 +25,9 @@ const Header = ({ theme, toggleTheme }) => {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                         <div style={{ width: '24px', height: '24px', background: 'var(--text-color)', borderRadius: '50%' }}></div>
-                        <span style={{ fontWeight: 700, fontSize: '1.25rem', color: 'var(--text-color)' }}>Banker</span>
+                        <span style={{ fontWeight: 700, fontSize: '1.25rem', color: 'var(--text-color)' }}>Banker's</span>
                     </div>
-                    <a href="#" style={{ color: 'var(--text-color)', opacity: 0.8, textDecoration: 'none', fontSize: '0.95rem', fontWeight: 500, transition: 'opacity 0.2s' }}>Features</a>
+                    {/* <a  href="#" style={{ color: 'var(--text-color)', opacity: 0.8, textDecoration: 'none', fontSize: '0.95rem', fontWeight: 500, transition: 'opacity 0.2s' }}>Calculatation</a> */}
                 </div>
 
                 <div
