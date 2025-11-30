@@ -103,7 +103,6 @@ const Hero = () => {
               cursor: 'pointer',
             }}
           >
-            {/* Gradient Accent */}
             <div
               style={{
                 position: 'absolute',

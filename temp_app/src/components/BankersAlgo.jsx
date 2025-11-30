@@ -101,7 +101,6 @@ const BankersAlgo = React.forwardRef(() => {
       row.map((val, j) => val - safeAllocation[i][j])
     );
 
-    // Check for negative needs
     for (let i = 0; i < pCount; i++) {
       for (let j = 0; j < rCount; j++) {
         if (need[i][j] < 0) {
@@ -132,7 +131,6 @@ const BankersAlgo = React.forwardRef(() => {
           }
 
           if (canAllocate) {
-            // Store process details
             let processInfo = {
               process: `P${p}`,
               resources: [],
@@ -159,7 +157,6 @@ const BankersAlgo = React.forwardRef(() => {
       }
 
       if (!found) {
-        // Add unfinished processes
         for (let p = 0; p < pCount; p++) {
           if (!finish[p] && !processedSet.has(p)) {
             let processInfo = {
@@ -256,7 +253,6 @@ const BankersAlgo = React.forwardRef(() => {
             minWidth: "800px",
           }}
         >
-          {/* Allocation Matrix */}
           <div>
             <h4
               style={{ marginBottom: "1rem", color: "var(--secondary-color)" }}
@@ -320,7 +316,6 @@ const BankersAlgo = React.forwardRef(() => {
             </table>
           </div>
 
-          {/* Max Matrix */}
           <div>
             <h4 style={{ marginBottom: "1rem", color: "var(--primary-color)" }}>
               Max
@@ -377,7 +372,6 @@ const BankersAlgo = React.forwardRef(() => {
             </table>
           </div>
 
-          {/* Available Vector */}
           <div
             style={{
               display: "flex",
@@ -454,7 +448,6 @@ const BankersAlgo = React.forwardRef(() => {
         </div>
       </div>
 
-      {/* Results */}
       {result && (
         <div
           style={{

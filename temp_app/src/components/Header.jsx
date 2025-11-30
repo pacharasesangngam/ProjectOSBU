@@ -27,7 +27,6 @@ const Header = ({ theme, toggleTheme ,bankersRef }) => {
                         <div style={{ width: '24px', height: '24px', background: 'var(--text-color)', borderRadius: '50%' }}></div>
                         <span style={{ fontWeight: 700, fontSize: '1.25rem', color: 'var(--text-color)' }}>Banker's</span>
                     </div>
-                    {/* <a  href="#" style={{ color: 'var(--text-color)', opacity: 0.8, textDecoration: 'none', fontSize: '0.95rem', fontWeight: 500, transition: 'opacity 0.2s' }}>Calculatation</a> */}
                 </div>
 
                 <div

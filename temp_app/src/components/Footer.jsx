@@ -8,10 +8,8 @@ const Footer = () => {
         offset: ["start end", "end start"]
     });
 
-    // Normal letters stay in place
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "0%"]);
 
-    // Special characters lift up more as you scroll down
     const yOffset = useTransform(scrollYProgress, [0, 0.5, 1], ["0%", "-17%", "0%"]);
 
     const text = "Banker's Algorithm";
@@ -33,7 +31,6 @@ const Footer = () => {
             position: 'relative'
         }}>
             <div className="container">
-                {/* Members Section */}
                 <div style={{
                     display: 'flex',
                     justifyContent: 'space-between',
@@ -42,7 +39,6 @@ const Footer = () => {
                     margin: '0 auto 7rem',
                     padding: '0 2rem'
                 }}>
-                    {/* Left: Members Title */}
                     <div>
                         <h3 style={{
                             alignItems: 'flex-start',
@@ -55,7 +51,6 @@ const Footer = () => {
                         </h3>
                     </div>
 
-                    {/* Right: Member List */}
                     <div style={{
                         display: 'flex',
                         alignItems: 'flex-end',
@@ -85,7 +80,6 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Animated Title */}
                 <div style={{ textAlign: 'center' }}>
                     <motion.h2
                         style={{
